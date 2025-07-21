@@ -1,0 +1,615 @@
+/* =====================
+   Типографика для SaaS/Tech стиля
+   ===================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap");
+
+body {
+  font-family: "Inter", "Roboto", Arial, sans-serif;
+  margin: 0;
+  font-size: 17px;
+  font-weight: 400;
+  color: #23272f;
+  background: #f8fafc;
+  line-height: 1.6;
+}
+
+/* Крупный жирный заголовок hero */
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: #23272f;
+  margin-bottom: 18px;
+  max-width: 420px;
+}
+
+/* Средний полужирный для секционных заголовков */
+.features h2,
+.pricing h2,
+.contact h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #23272f;
+  margin-bottom: 36px;
+  letter-spacing: -0.01em;
+}
+
+/* Названия функций (features) */
+.features-item h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #23272f;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Описания функций и секций */
+.features-description,
+.pricing-description,
+.hero-description {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #555;
+  text-align: center;
+}
+
+/* Кнопки: полужирный */
+.btn,
+.hero-btn,
+.contact-btn,
+.pricing-btn {
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.01em;
+}
+
+/* Навигация: medium */
+.nav-link {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* Цены: жирный для цифр, обычный для /month */
+.pricing-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #23272f;
+}
+.pricing-item:nth-child(2) .pricing-price {
+  color: #fff;
+}
+.pricing-price span {
+  font-weight: 400;
+  font-size: 1rem;
+  color: inherit;
+  margin-left: 2px;
+}
+
+/* Общая иерархия */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter", "Roboto", Arial, sans-serif;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+/* =====================
+   Header Styles
+   ===================== */
+
+.header {
+  /* Центрируем header и ограничиваем ширину */
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #23272f;
+  padding: 0 40px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  /* Логотип: ограничиваем высоту */
+  height: 36px;
+  width: auto;
+}
+
+.nav {
+  /* Контейнер для навигации и кнопки */
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-list {
+  /* Список навигации: горизонтальное расположение */
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  /* Ссылки навигации: белый цвет, плавное изменение цвета */
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  /* Эффект при наведении */
+  color: #6c63ff;
+}
+
+.btn {
+  /* Кнопка Sign Up: синий фон, белый текст, скругления */
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  /* Эффект при наведении на кнопку */
+  background: #2563eb;
+}
+
+/* =====================
+   Hero Section Styles (обновление)
+   ===================== */
+
+.hero {
+  /* Центрируем содержимое hero-секции и ограничиваем ширину */
+  max-width: 1100px;
+  margin: 0 auto 0px auto;
+  background: #f5f8ff;
+  display: flex;
+  align-items: flex-start; /* Выравниваем по верхнему краю */
+  justify-content: center;
+  padding: 48px 40px 56px 40px;
+  border-radius: 0 0 16px 16px;
+  gap: 32px;
+}
+
+.hero-content {
+  /* Убираем min-height, выравниваем по верхнему краю */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.hero h1,
+.hero-description,
+.hero-btn {
+  /* Явное выравнивание по левому краю */
+  text-align: left;
+  align-self: flex-start;
+}
+
+.hero h1 {
+  /* Крупный жирный заголовок */
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #23272f;
+  margin-bottom: 18px;
+  max-width: 420px;
+}
+
+.hero-description {
+  /* Описание под заголовком */
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 28px;
+  max-width: 380px;
+}
+
+.hero-btn {
+  /* Кнопка "Get Started" */
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-bottom: 24px;
+}
+
+.hero-btn:hover {
+  background: #2563eb;
+}
+
+.hero-img {
+  /* Убираем align-self и min-height, чтобы не тянуть вниз */
+  max-width: 410px;
+  width: 100%;
+  height: auto;
+  margin-left: 0;
+  margin-top: 20px;
+  display: block;
+  object-fit: contain;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 32px 16px 40px 16px;
+  }
+  .hero-content {
+    align-items: center;
+  }
+  .hero h1,
+  .hero-description,
+  .hero-btn {
+    text-align: center;
+    align-self: center;
+  }
+  .hero-img {
+    margin: 32px 0 0 0;
+    max-width: 90vw;
+  }
+}
+
+/* =====================
+   Features Section Styles
+   ===================== */
+
+.features {
+  /* Отступы и выравнивание */
+  padding: 32px 0 40px 0;
+  background: #fff;
+}
+
+.features h2 {
+  /* Заголовок секции по центру */
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 36px;
+  color: #23272f;
+}
+
+.features-list {
+  /* Сетка из 4 карточек */
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.features-item {
+  /* Карточка: белый фон, тень, скругления, фиксированная ширина */
+  background: #fff;
+  box-shadow: 0 2px 16px 0 rgba(44, 62, 80, 0.07);
+  border-radius: 14px;
+  padding: 32px 24px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 220px;
+  min-width: 180px;
+  transition: box-shadow 0.2s;
+}
+
+.features-item:hover {
+  /* Эффект наведения: усиление тени */
+  box-shadow: 0 4px 24px 0 rgba(44, 62, 80, 0.13);
+}
+
+.features-img {
+  /* Иконка: размер и отступ */
+  width: 44px;
+  height: 44px;
+  margin-bottom: 18px;
+}
+
+.features-item h3 {
+  /* Заголовок карточки */
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #23272f;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.features-description {
+  /* Описание карточки */
+  font-size: 0.98rem;
+  color: #555;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .features-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .features-item {
+    width: 90vw;
+    max-width: 340px;
+  }
+}
+
+/* =====================
+   Pricing Section Styles
+   ===================== */
+
+.pricing {
+  /* Отступы и выравнивание */
+  padding: 32px 0 40px 0;
+  background: #fff;
+}
+
+.pricing h2 {
+  /* Заголовок секции по центру */
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 36px;
+  color: #23272f;
+}
+
+.pricing-list {
+  /* Сетка из 3 карточек */
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.pricing-item {
+  /* Карточка: белый фон, тень, скругления, фиксированная ширина */
+  background: #fff;
+  box-shadow: 0 2px 16px 0 rgba(44, 62, 80, 0.07);
+  border-radius: 14px;
+  padding: 32px 24px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 260px;
+  min-width: 180px;
+  transition: box-shadow 0.2s, background 0.2s, color 0.2s;
+}
+
+.pricing-item:nth-child(2) {
+  /* Центральная карточка: выделение цветом */
+  background: #3b82f6;
+  color: #fff;
+  box-shadow: 0 4px 24px 0 rgba(44, 62, 80, 0.13);
+  z-index: 1;
+}
+
+.pricing-item:nth-child(2) h3,
+.pricing-item:nth-child(2) .pricing-description {
+  color: #fff;
+}
+
+.pricing-item h3 {
+  /* Название тарифа */
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #23272f;
+}
+
+.pricing-item:nth-child(2) h3 {
+  color: #fff;
+}
+
+.pricing-item .pricing-description {
+  /* Описание тарифа */
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.pricing-item:nth-child(2) .pricing-description {
+  color: #e0e7ff;
+}
+
+.pricing-item .pricing-btn {
+  /* Кнопка выбора тарифа */
+  background: #23272f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.pricing-item:nth-child(2) .pricing-btn {
+  background: #fff;
+  color: #3b82f6;
+}
+
+.pricing-item .pricing-btn:hover {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.pricing-item:nth-child(2) .pricing-btn:hover {
+  background: #23272f;
+  color: #fff;
+}
+
+.pricing-item {
+  /* Эффект наведения: усиление тени */
+  box-shadow: 0 2px 16px 0 rgba(44, 62, 80, 0.07);
+}
+
+.pricing-item:hover {
+  box-shadow: 0 4px 24px 0 rgba(44, 62, 80, 0.13);
+}
+
+.pricing-item:nth-child(2):hover {
+  /* Синее свечение сзади карточки Pro при наведении */
+  box-shadow: 0 0 32px 0 #3b82f6, 0 4px 24px 0 rgba(44, 62, 80, 0.13);
+}
+
+/* Стоимость тарифа: такой же размер, как у h3 */
+.pricing-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #23272f;
+}
+
+.pricing-item:nth-child(2) .pricing-price {
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .pricing-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .pricing-item {
+    width: 90vw;
+    max-width: 340px;
+  }
+}
+
+/* =====================
+   Contact Section Styles
+   ===================== */
+
+.contact {
+  /* Отступы и выравнивание */
+  padding: 32px 0 40px 0;
+  background: #fff;
+}
+
+.contact h2 {
+  /* Заголовок секции по центру */
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 36px;
+  color: #23272f;
+}
+
+.contact-form {
+  /* Центрирование формы */
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-input {
+  /* Стили для input и textarea */
+  width: 100%;
+  padding: 14px 16px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  background: #f8fafc;
+  font-size: 1rem;
+  color: #23272f;
+  transition: border 0.2s, box-shadow 0.2s;
+  resize: none;
+}
+
+.contact-input:focus {
+  border: 1.5px solid #3b82f6;
+  outline: none;
+  box-shadow: 0 2px 8px 0 rgba(59, 130, 246, 0.08);
+}
+
+.contact-btn {
+  /* Кнопка отправки: синяя, на всю ширину */
+  width: 100%;
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 8px;
+}
+
+.contact-btn:hover {
+  background: #2563eb;
+}
+
+@media (max-width: 600px) {
+  .contact-form {
+    max-width: 98vw;
+    padding: 0 2vw;
+  }
+}
+
+/* =====================
+   Footer Styles
+   ===================== */
+
+.footer {
+  /* Тёмный фон, отступы, выравнивание по центру */
+  background: #23272f;
+  color: #fff;
+  padding: 32px 0 24px 0;
+  text-align: center;
+}
+
+.footer-list {
+  /* Список соцсетей: горизонтальное расположение */
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  list-style: none;
+  margin: 18px 0 0 0;
+  padding: 0;
+}
+
+.footer-link {
+  /* Ссылки соцсетей: белый цвет, плавное изменение цвета */
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: #6c63ff;
+}
+
+.footer-copyright {
+  /* Копирайт: уменьшенный размер, светлый оттенок */
+  font-size: 0.98rem;
+  color: #bfc4d1;
+  margin: 0;
+}
