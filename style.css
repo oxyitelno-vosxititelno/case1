@@ -248,27 +248,6 @@ h6 {
   object-fit: contain;
 }
 
-@media (max-width: 900px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    padding: 32px 16px 40px 16px;
-  }
-  .hero-content {
-    align-items: center;
-  }
-  .hero h1,
-  .hero-description,
-  .hero-btn {
-    text-align: center;
-    align-self: center;
-  }
-  .hero-img {
-    margin: 32px 0 0 0;
-    max-width: 90vw;
-  }
-}
-
 /* =====================
    Features Section Styles
    ===================== */
@@ -339,18 +318,6 @@ h6 {
   font-size: 0.98rem;
   color: #555;
   text-align: center;
-}
-
-@media (max-width: 900px) {
-  .features-list {
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-  }
-  .features-item {
-    width: 90vw;
-    max-width: 340px;
-  }
 }
 
 /* =====================
@@ -488,18 +455,6 @@ h6 {
   color: #fff;
 }
 
-@media (max-width: 900px) {
-  .pricing-list {
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-  }
-  .pricing-item {
-    width: 90vw;
-    max-width: 340px;
-  }
-}
-
 /* =====================
    Contact Section Styles
    ===================== */
@@ -566,13 +521,6 @@ h6 {
   background: #2563eb;
 }
 
-@media (max-width: 600px) {
-  .contact-form {
-    max-width: 98vw;
-    padding: 0 2vw;
-  }
-}
-
 /* =====================
    Footer Styles
    ===================== */
@@ -612,4 +560,89 @@ h6 {
   font-size: 0.98rem;
   color: #bfc4d1;
   margin: 0;
+}
+
+/* =====================
+   Адаптивность для мобильных устройств
+   ===================== */
+
+@media (max-width: 900px) {
+  .header,
+  .hero,
+  .features,
+  .pricing,
+  .contact,
+  .footer {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 32px 8px 40px 8px;
+  }
+  .hero-content {
+    align-items: center;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 2rem;
+    max-width: 100%;
+  }
+  .hero-img {
+    max-width: 90vw;
+    margin: 0;
+  }
+  .features-list,
+  .pricing-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .features-item,
+  .pricing-item {
+    width: 100%;
+    max-width: 340px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header,
+  .hero,
+  .features,
+  .pricing,
+  .contact,
+  .footer {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .hero {
+    padding: 20px 2px 24px 2px;
+    gap: 16px;
+  }
+  .hero h1 {
+    font-size: 1.3rem;
+  }
+  .btn,
+  .hero-btn,
+  .contact-btn,
+  .pricing-btn {
+    font-size: 1rem;
+    padding: 10px 0;
+  }
+  .features h2,
+  .pricing h2,
+  .contact h2 {
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+  }
+  .features-item h3 {
+    font-size: 1rem;
+  }
+  .features-description,
+  .pricing-description,
+  .hero-description {
+    font-size: 0.95rem;
+  }
 }
