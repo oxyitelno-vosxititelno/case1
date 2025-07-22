@@ -563,152 +563,183 @@ h6 {
 }
 
 /* =====================
-   Адаптивность для мобильных устройств (исправленная версия)
+   Мобильная адаптивность (полная переработка)
    ===================== */
 
+/* Базовые стили для body */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 @media (max-width: 900px) {
-  /* Header: скрываем навигацию, оставляем логотип и кнопку */
-  .nav-list {
-    display: none;
-  }
+  /* Header: полностью переделываем для мобильных */
   .header {
-    padding: 0 20px;
-    justify-content: space-between;
-  }
-  .nav {
-    gap: 16px;
+    padding: 0 20px !important;
+    height: 60px !important;
+    justify-content: space-between !important;
   }
 
-  /* Секции: правильные отступы и центрирование */
-  .hero,
+  /* Полностью скрываем навигационное меню */
+  .nav-list {
+    display: none !important;
+  }
+
+  /* Оставляем только кнопку в навигации */
+  .nav {
+    gap: 0 !important;
+  }
+
+  /* Hero: делаем полностью адаптивным */
+  .hero {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 32px !important;
+    padding: 40px 20px !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+
+  .hero-content {
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .hero h1 {
+    font-size: 2rem !important;
+    text-align: center !important;
+    max-width: none !important;
+    width: 100% !important;
+  }
+
+  .hero-description {
+    text-align: center !important;
+    max-width: none !important;
+    width: 100% !important;
+  }
+
+  .hero-btn {
+    align-self: center !important;
+    text-align: center !important;
+  }
+
+  .hero-img {
+    max-width: 80vw !important;
+    margin: 0 auto !important;
+  }
+
+  /* Секции: убираем ограничения ширины */
   .features,
   .pricing,
   .contact,
   .footer {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 32px 20px !important;
+    max-width: none !important;
+    margin: 0 !important;
   }
 
-  /* Hero: вертикальное расположение, центрирование */
-  .hero {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 32px;
-    padding: 40px 20px;
-  }
-  .hero-content {
-    align-items: center;
-    text-align: center;
-    width: 100%;
-  }
-  .hero h1 {
-    font-size: 2.2rem;
-    max-width: 100%;
-    text-align: center;
-  }
-  .hero-description {
-    text-align: center;
-    max-width: 100%;
-  }
-  .hero-img {
-    max-width: 85vw;
-    margin: 0;
-  }
-
-  /* Features и Pricing: вертикальные списки */
+  /* Features и Pricing списки */
   .features-list,
   .pricing-list {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
   }
+
   .features-item,
   .pricing-item {
-    width: 100%;
-    max-width: 350px;
+    width: 100% !important;
+    max-width: 350px !important;
+    margin: 0 auto !important;
   }
 
   /* Contact форма */
   .contact-form {
-    max-width: 100%;
-    padding: 0 10px;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
   }
 }
 
 @media (max-width: 600px) {
-  /* Очень маленькие экраны: минимальные отступы */
+  /* Экстра маленькие экраны */
   .header {
-    padding: 0 16px;
-    height: 60px;
-  }
-  .logo-img {
-    width: 100px;
-    height: auto;
-  }
-  .btn {
-    padding: 8px 16px;
-    font-size: 0.9rem;
+    padding: 0 16px !important;
+    height: 56px !important;
   }
 
-  /* Секции: минимальные отступы */
-  .hero,
+  .logo-img {
+    width: 90px !important;
+    height: auto !important;
+  }
+
+  .btn {
+    padding: 8px 16px !important;
+    font-size: 0.9rem !important;
+  }
+
+  .hero {
+    padding: 24px 16px !important;
+    gap: 24px !important;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .hero-description {
+    font-size: 1rem !important;
+  }
+
+  .hero-btn {
+    width: 100% !important;
+    max-width: 200px !important;
+    padding: 12px 0 !important;
+    text-align: center !important;
+  }
+
   .features,
   .pricing,
   .contact,
   .footer {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 24px 16px !important;
   }
 
-  /* Hero: компактная версия */
-  .hero {
-    padding: 24px 16px;
-    gap: 24px;
-  }
-  .hero h1 {
-    font-size: 1.8rem;
-    line-height: 1.3;
-  }
-  .hero-description {
-    font-size: 1rem;
-  }
-  .hero-btn {
-    width: 100%;
-    max-width: 280px;
-    padding: 12px 0;
-  }
-
-  /* Заголовки секций */
   .features h2,
   .pricing h2,
   .contact h2 {
-    font-size: 1.6rem;
-    margin-bottom: 24px;
+    font-size: 1.5rem !important;
+    margin-bottom: 20px !important;
   }
 
-  /* Features и Pricing: компактные карточки */
   .features-item,
   .pricing-item {
-    max-width: 100%;
-    margin: 0 auto;
+    max-width: none !important;
+    width: 100% !important;
   }
 
-  /* Contact форма: на всю ширину */
-  .contact-form {
-    padding: 0;
-  }
   .contact-input {
-    padding: 12px 14px;
-  }
-  .contact-btn {
-    padding: 12px 0;
+    padding: 12px 14px !important;
   }
 
-  /* Footer: вертикальное расположение */
+  .contact-btn {
+    padding: 12px 0 !important;
+  }
+
   .footer-list {
-    flex-direction: column;
-    gap: 16px;
-    margin-top: 16px;
+    flex-direction: column !important;
+    gap: 12px !important;
+    margin-top: 16px !important;
   }
 }
